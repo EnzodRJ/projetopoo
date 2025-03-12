@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style> 
+body { 
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header { 
+    background-color: aqua; 
+    text-align: center; 
+    padding: 50px; 
+    font-size: 20px; 
+    font-family: Arial, Helvetica, sans-serif;
+} 
+h1 { 
+text-align: center;
+font:  optional;
+
+
+}
+.container {
+    display: flex;
+    gap: 20px; /* Espaço entre as colunas */
+  }
+  .coluna {
+    width: 50%; /* Define a largura das colunas */
+    
+    padding: 30px;
+  }
+  .coluna p{  font-size: 20px;
+
+  }  
+  .img { 
+       width: 600px;
+
+  }  
+
+
+
+  .containerjs {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .avaliacoes {
+            display: flex;
+            justify-content: left;
+            gap: 35px;
+            margin-top: 12px;
+        }
+
+        .contador {
+            padding: 8px 15px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            font-size: 20px;
+        } 
+        input[type="radio"] {
+    width: 25px;  
+    height: 25px;
+} 
+footer{ 
+    background-color: aqua; 
+    padding: 20px; 
+    text-align: center; 
+    font-size: 20px; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+    </style>
+
+</style>
+<header class="header"> 
+  <p>Enzo Rodrigues de Jesus</p>
+
+
+</header>
+<body>
+  <h1 style="text-decoration: underline;">Crash Bandicoot</h1>
+  <br>
+  
+    <div class="container">  
+   <div class="coluna"><p>Crash Bandicoot é uma franquia de jogos eletrônicos de plataforma desenvolvida originalmente pela Naughty Dog para o console PlayStation. A série passou por várias desenvolvedoras e foi publicada em diversas plataformas posteriormente. Os jogos são do gênero plataforma e runners com diversos spin-offs do gênero corrida e em grupo. A partir do ano 2000, começou a ser publicada pela Universal Interactive, que mais tarde ficou conhecida como Vivendi Games. Em 2007, a Vivendi Games foi fundida com a desenvolvedora Activision que atualmente possui os direitos da série e é a principal publicadora.</p></div>
+   <div class="coluna"><p>Os jogos são ambientados nas Ilhas Wumpa, um arquipélago fictício situado ao sudeste da Austrália, perto da Tasmânia onde humanos e animais mutantes coexistem. O protagonista da série é um bandicoot geneticamente aprimorado chamado Crash, que vive uma vida tranquila nas Ilhas Wumpa até que interrompido pelo principal antagonista dos jogos, Doutor Neo Cortex, que criou Crash e deseja o matá-lo, pois ele é um experimento fracassado. Na maioria dos jogos, Crash deve derrotar Cortex e seus planos de dominar o mundo.</p></div>
+
+    </div>  
+    <br> 
+    <h1 style="text-decoration: underline;">Jogabilidade</h1>  
+    <div class="container">  
+        <div class="coluna"><img src="OIP.jpg" alt="" class="img"> <figcaption>Esta é a legenda da imagem.</figcaption></div>
+        <div class="coluna"><p>Os jogos são ambientados nas Ilhas Wumpa, um arquipélago fictício situado ao sudeste da Austrália, perto da Tasmânia onde humanos e animais mutantes coexistem. O protagonista da série é um bandicoot geneticamente aprimorado chamado Crash, que vive uma vida tranquila nas Ilhas Wumpa até que interrompido pelo principal antagonista dos jogos, Doutor Neo Cortex, que criou Crash e deseja o matá-lo, pois ele é um experimento fracassado. Na maioria dos jogos, Crash deve derrotar Cortex e seus planos de dominar o mundo.</p></div>
+   </div>  
+
+<hr>
+
+   <div class="containerjs">
+    <h2>Avalie:</h2>
+    <label>
+        <input type="radio" name="opiniao" value="positivo"> Gostou fera
+    </label>
+    <label>
+        <input type="radio" name="opiniao" value="negativo"> Não gostou fera
+    </label>
+    <button onclick="contar()">Avalie</button>
+
+    <div class="avaliacoes">
+        <div class="contador">👍 <span id="positivo">0</span></div>
+        <div class="contador">👎 <span id="negativo">0</span></div>
+    </div>
+</div>
+</div>
+</body> 
+<footer>
+    <p>12/03/2025</p>
+</footer>
+<script>
+    let positivo = 0;
+    let negativo = 0;
+
+    function contar() {
+        const escolha = document.querySelector('input[name="opiniao"]:checked');
+        if (escolha) {
+            if (escolha.value === "positivo") {
+                positivo++;
+                document.getElementById("positivo").textContent = positivo;
+            } else {
+                negativo++;
+                document.getElementById("negativo").textContent = negativo;
+            }
+        } 
+    }
+</script>
+</html>
