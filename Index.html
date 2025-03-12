@@ -56,25 +56,7 @@ font:  optional;
 
         .contador {
             padding: 8px 15px;
-            border: 2px solid #333;
-            border-radius: 10px;
-            font-size: 20px;
-        } 
-        input[type="radio"] {
-    width: 25px;  
-    height: 25px;
-} 
-footer{ 
-    background-color: aqua; 
-    padding: 20px; 
-    text-align: center; 
-    font-size: 20px; 
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-    </style>
-
-</style>
+<link rel="stylesheet" href="styles.css">
 <header class="header"> 
   <p>Enzo Rodrigues de Jesus</p>
 
@@ -118,21 +100,5 @@ footer{
 <footer>
     <p>12/03/2025</p>
 </footer>
-<script>
-    let positivo = 0;
-    let negativo = 0;
-
-    function contar() {
-        const escolha = document.querySelector('input[name="opiniao"]:checked');
-        if (escolha) {
-            if (escolha.value === "positivo") {
-                positivo++;
-                document.getElementById("positivo").textContent = positivo;
-            } else {
-                negativo++;
-                document.getElementById("negativo").textContent = negativo;
-            }
-        } 
-    }
-</script>
+<script src="script.js" defer></script>
 </html>
